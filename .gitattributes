@@ -1,0 +1,25 @@
+# ============================================================================
+# 源码在工作区里是 GBK（Keil 在中文 Windows 下的默认编码），
+# 这里让 Git 在提交/检出时自动转码：
+#   提交 -> 仓库里存 UTF-8（GitHub 网页、手机端、其他人的编辑器都能正常显示中文）
+#   检出 -> 工作区里变回 GBK（Keil 打开仍然是正常的中文，不用改任何设置）
+# 注意：这条只对 .c/.h 生效，.md/.ioc/.uvprojx 等本来就是 UTF-8。
+# ============================================================================
+*.c    working-tree-encoding=GBK
+*.h    working-tree-encoding=GBK
+
+# 二进制文件，禁止 Git 做文本/行尾转换和 diff
+*.jpg    binary
+*.jpeg   binary
+*.png    binary
+*.bmp    binary
+*.gif    binary
+*.pdf    binary
+*.zip    binary
+*.rar    binary
+*.7z     binary
+*.lib    binary
+*.a      binary
+*.hex    binary
+*.axf    binary
+*.bin    binary
